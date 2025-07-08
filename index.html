@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
+    <!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- MathJax 3 Configuration -->
     <script>
         MathJax = {
@@ -142,15 +144,72 @@
             overflow-y: hidden;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9em;
-            color: #555;
-        }
+        /* =================== NEW PROFESSIONAL FOOTER STYLES =================== */
+
+/* Main Footer Container */
+footer {
+    background-color: #222; /* Professional dark background */
+    color: #a0a0a0;         /* Softer white text for less eye strain */
+    padding: 4rem 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+/* Social Icons Container */
+.social-icons {
+    margin-bottom: 2rem;
+}
+
+/* Icon Link Styling */
+.social-icons a {
+    display: inline-block;
+    margin: 0 8px; /* Spacing between icons */
+}
+
+/* Icon Structure: The Circle Background */
+.social-icons .fa-stack .fa-circle {
+    color: #f5f5f5; /* Off-white circle background */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Icon Structure: The Icon Itself (GitHub, Twitter, etc.) */
+.social-icons .fa-stack .fa-stack-1x {
+    color: #222; /* Dark icon to contrast with the circle */
+    transition: color 0.3s ease-in-out;
+}
+
+/* --- ICON HOVER EFFECT --- */
+/* On hover, change the circle's color to your site's primary theme color */
+.social-icons a:hover .fa-circle {
+    color: #222; /* Changed to match the footer background for a "punch-out" effect */
+}
+
+/* On hover, make the icon inside pure white for a crisp, inverted look */
+.social-icons a:hover .fa-stack-1x {
+    color: #ffffff;
+}
+
+/* Copyright & License Section */
+.copyright-license p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Styling links within the copyright text */
+.copyright-license a {
+    color: #e0e0e0; /* Brighter link color to stand out */
+    font-weight: normal; /* Override bold from the global 'a' style */
+    text-decoration: none;
+    border-bottom: 1px dotted #888;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+/* Hover effect for copyright links */
+.copyright-license a:hover {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
         
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -302,16 +361,34 @@
             </section>
         </article>
         
-        <footer id="license-footer">
+        <!-- =================== NEW FOOTER START =================== -->
+<footer>
+    <div class="footer-container">
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://github.com/SuperJPcoder" target="_blank" title="GitHub"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-github fa-stack-1x"></i></span></a>
+            <a href="https://x.com/DekiSugiGenius" target="_blank" title="X (Twitter)"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-x-twitter fa-stack-1x"></i></span></a>
+            <a href="mailto:priyanksjhaveri@gmail.com" title="Email"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-envelope fa-stack-1x"></i></span></a>
+            <a href="https://superjpcoder.github.io/portfolio-website/" target="_blank" title="Personal Website"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fas fa-link fa-stack-1x"></i></span></a>
+            <a href="https://www.linkedin.com/in/priyank-jhaveri7" target="_blank" title="LinkedIn"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin-in fa-stack-1x"></i></span></a>
+            <a href="https://discord.com/invite/1333468244094488636" target="_blank" title="Discord"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-discord fa-stack-1x"></i></span></a>
+        </div>
+
+        <!-- Copyright & License -->
+        <div class="copyright-license">
             <p>
                 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
                     <img alt="Creative Commons License" style="border-width:0; vertical-align: middle;" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
                 </a>
-                <br />
-                This work by <strong>Priyank Jhaveri</strong> is licensed under a 
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                <br>
+                This work by <a class="author-link" href="#" target="_blank">Priyank Jhaveri</a> is licensed under a 
+<!-- THIS IS THE NEWLY ADDED LINK -->
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0 License</a>.
             </p>
-        </footer>
+        </div>
+    </div>
+</footer>
+<!-- =================== NEW FOOTER END =================== -->
     </main>
 
 </body>
